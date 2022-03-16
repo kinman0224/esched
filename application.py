@@ -20,7 +20,7 @@ class Application(object):
 
         self.max_steps = max_steps
 
-        df = pandas.read_csv('./traces/impala-atari/placement.csv')
+        df = pandas.read_csv('./traces/atari-impala/placement.csv')
 
         self.max_workers = max(df.num_workers)
 
@@ -37,7 +37,7 @@ class Application(object):
 
 TRACES_DIR = os.path.join(os.path.dirname(__file__), "traces")
 APPLICATIONS = {
-    "impala-atari": Application(os.path.join(TRACES_DIR, "impala-atari"), max_steps=100000000),
+    "atari-impala": Application(os.path.join(TRACES_DIR, "atari-impala"), max_steps=100000000),
     "doom": Application(os.path.join(TRACES_DIR, "doom"), max_steps=100000000),
     "mujoco": Application(os.path.join(TRACES_DIR, "mujoco"), max_steps=100000000),
 }

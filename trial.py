@@ -53,7 +53,7 @@ class Trial:
     def get_application(self):
         application = None
         if self.trainable_name in ["ImpalaTrainer_PongNoFrameskip-v4", "ImpalaTrainer_QbertNoFrameskip-v4", "PPOTrainer_QbertNoFrameskip-v4", "PPOTrainer_BeamRiderNoFrameskip-v4"]:
-            application = APPLICATIONS['impala-atari']
+            application = APPLICATIONS['atari-impala']
         else:
             raise NotImplementedError
 
